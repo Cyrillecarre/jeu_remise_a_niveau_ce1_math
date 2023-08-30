@@ -1,5 +1,7 @@
 body {
-    background-color: lightgray;
+    background-image: url(/assets/professeur-dessin-anime-dessine-main-enseignant-au-tableau-noir-dans-fond-classe_40876-3426.avif);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
 .titre {
@@ -8,10 +10,49 @@ body {
     font-size: 50px;
 }
 
+.boutonA {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 150px;
+    height: 50px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    background-color: rgb(228, 16, 16);
+    font-size: 20px;
+}
+
 .sousTitre {
     display: flex;
-    padding: 50px 50px 50px 150px;
+    justify-content: center;
     font-size: 30px;
+    color: beige;
+}
+
+.choixDiscipline {
+    display: flex;
+    padding: 50px 50px 50px 20%;
+    font-size: 50px;
+    color: rgb(177, 171, 208);
+}
+
+.acceuil {
+    display: flex;
+    padding: 50px;
+}
+
+.boutonAcceuil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 80px;
+    border-radius: 30px;
+    font-size: 24px;
+    margin: 10px;
+    color: rgb(237, 7, 7);
+    background-color: rgb(246, 214, 5);
 }
 
 .startbtn {
@@ -20,6 +61,8 @@ body {
     align-items: center;
     width: 200px;
     height: 50px;
+    border-radius: 30px;
+    background-color: rgb(68, 231, 39);
 
 }
 
@@ -27,32 +70,48 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 150px;
+    height: 200px;
     font-size: 40px;
-    margin: 0, 80px;
+    padding: 100px 150px 0 150px;
     background-color: inherit;
 }
 
 .chiffre {
-    font-size: 90px;
+    font-size: 150px;
 }
 
 .operat {
-    font-size: 90px;
+    font-size: 150px;
 }
 
 #resultat {
     display: flex;
-    font-size: 80px;
-    height: 90px;
+    font-size: 120px;
+    height: 150px;
     width: 200px;
+    padding: 0 50px 0 50px;
     padding-left:80px ;
+    border-radius: 30px;
 }
 
 #validation {
-    height: 90px;
+    height: 130px;
     width: 200px;
-    background-color: rgb(119, 134, 248);
+    background-color: rgb(5, 21, 142);
     font-size: 40px;
+    border-radius: 30px;
+    color: whitesmoke;
 
+}
+
+.startbtn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 150px;
+    height: 50px;
+    transform: translateX(50%);
+    border-radius: 20px;
+    background-color: rgb(5, 214, 29);
+    font-size: 20px;
 }
