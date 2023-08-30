@@ -6,10 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var validationButton = document.getElementById("validation");
     var startButton = document.getElementById("start");
     var acceuil = document.getElementById("boutonA")
+    var totalEssaiElement = document.getElementById("nbessai")
+    var bonneReponseElement = document.getElementById("nbreponse")
 
     var premier = 0;
     var deuxieme = 0;
-    var operateurSymbole = "+"; // Déclarer operateurSymbole en tant que variable globale
+    var operateurSymbole = "+";
+    var totalEssai = 0;
+    var bonneReponse = 0;
 
     startButton.addEventListener("click", function () {
         premier = Math.floor(Math.random() * 100) + 1;
@@ -40,9 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             resultatAttendu = premier * deuxieme;
         }
+        totalEssai ++;
 
         if (parseInt(resultatInput.value) === resultatAttendu) {
             document.body.style.backgroundColor = "green";
+            bonneReponse++;
             console.log(resultatAttendu);
             resultatInput.value = "";
             setTimeout(function () {
@@ -56,6 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 resultatInput.value = "";
                 document.body.style.backgroundColor = "inherit";
             }, 1500);
+        }
+        totalEssaiElement.textContent = totalEssai;
+        bonneReponseElement.textContent = bonneReponse;
+
+        if (totalEssai >= 10) {
+            alert("Voici ton résultat, tu as: " + bonneReponse + "  Bonnes réponse sur 10!");
         }
     });
 
